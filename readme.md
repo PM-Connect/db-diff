@@ -50,8 +50,10 @@ QUEUE_DRIVER=sync
 If you opt to use a queue driver that is not `sync`, you will need to run the build-in queue worker through the command line.
 
 ```
-php artisan queue:listen --queue=default
+php artisan queue:listen --queue=default --timeout=120
 ```
+
+You may also want to set the timeout to a greater value, depending on the size of the databases you are planning to diff. Generally a 60 second timeout works well in most cases.
 
 For more information on running queue workers, please see [here](https://laravel.com/docs/5.3/queues#running-the-queue-worker).
 
