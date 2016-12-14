@@ -1,0 +1,13 @@
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 60px 0 60px 0;
+  border-bottom: 1px solid $laravel-border-color;
+  margin-bottom: 40px;
+
+  &__title {
+    color: $laravel-border-color;
+    font-size: 62px;
+    font-weight: 300;
+  }
+}
