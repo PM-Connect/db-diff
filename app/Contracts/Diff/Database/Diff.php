@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Contracts\Diff\Database;
+namespace PMConnect\DBDiff\Contracts\Diff\Database;
 
 interface Diff
 {

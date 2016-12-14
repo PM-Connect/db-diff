@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Eloquent;
+namespace PMConnect\DBDiff\Models\Eloquent;
 
 use Illuminate\Database\Eloquent\Model;
 

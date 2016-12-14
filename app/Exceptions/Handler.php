@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace PMConnect\DBDiff\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;

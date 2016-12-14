@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace PMConnect\DBDiff\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

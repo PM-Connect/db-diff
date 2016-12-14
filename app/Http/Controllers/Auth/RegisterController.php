@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace PMConnect\DBDiff\Http\Controllers\Auth;
 
-use App\User;
-use App\Http\Controllers\Controller;
+use PMConnect\DBDiff\User;
+use PMConnect\DBDiff\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 

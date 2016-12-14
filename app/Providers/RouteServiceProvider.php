@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Providers;
+namespace PMConnect\DBDiff\Providers;
 
-use App\Models\Eloquent\Diff;
+use PMConnect\DBDiff\Models\Eloquent\Diff;
 use Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -15,7 +15,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'App\Http\Controllers';
+    protected $namespace = 'PMConnect\DBDiff\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.

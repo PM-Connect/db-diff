@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Contracts\Support;
+namespace PMConnect\DBDiff\Contracts\Support;
 
 interface Output
 {

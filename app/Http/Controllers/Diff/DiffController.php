@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Diff;
+namespace PMConnect\DBDiff\Http\Controllers\Diff;
 
-use App\Http\Controllers\Controller;
-use App\Models\Eloquent\Diff;
+use PMConnect\DBDiff\Http\Controllers\Controller;
+use PMConnect\DBDiff\Models\Eloquent\Diff;
 
 class DiffController extends Controller
 {

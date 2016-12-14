@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Diff\Database;
+namespace PMConnect\DBDiff\Diff\Database;
 
 use PMConnect\DBDiff\Utils\Contracts\Output as OutputContract;
-use App\Models\Eloquent\Log;
+use PMConnect\DBDiff\Models\Eloquent\Log;
 
 class Output implements OutputContract
 {

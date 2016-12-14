@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Console;
+namespace PMConnect\DBDiff\Console;
 
-use App\Console\Commands\DiffDatabase;
+use PMConnect\DBDiff\Console\Commands\DiffDatabase;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 

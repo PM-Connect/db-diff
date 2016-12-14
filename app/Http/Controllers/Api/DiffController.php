@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace PMConnect\DBDiff\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
-use App\Jobs\DiffDatabases;
-use App\Models\Eloquent\Diff;
+use PMConnect\DBDiff\Http\Controllers\Controller;
+use PMConnect\DBDiff\Jobs\DiffDatabases;
+use PMConnect\DBDiff\Models\Eloquent\Diff;
 use Illuminate\Http\Request;
 
 class DiffController extends Controller

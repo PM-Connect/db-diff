@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Jobs;
+namespace PMConnect\DBDiff\Jobs;
 
-use App\Models\Eloquent\Diff as DiffModel;
+use PMConnect\DBDiff\Models\Eloquent\Diff as DiffModel;
 use PMConnect\DBDiff\Utils\Diff;
-use App\Diff\Database\Output;
+use PMConnect\DBDiff\Diff\Database\Output;
 use Illuminate\Bus\Queueable;
 use Illuminate\Database\Connectors\ConnectionFactory;
 use Illuminate\Queue\SerializesModels;

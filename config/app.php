@@ -175,11 +175,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        PMConnect\DBDiff\Providers\AppServiceProvider::class,
+        PMConnect\DBDiff\Providers\AuthServiceProvider::class,
+        // PMConnect\DBDiff\Providers\BroadcastServiceProvider::class,
+        PMConnect\DBDiff\Providers\EventServiceProvider::class,
+        PMConnect\DBDiff\Providers\RouteServiceProvider::class,
 
     ],
 
