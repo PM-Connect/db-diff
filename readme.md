@@ -1,6 +1,6 @@
 # DB Diff [![Latest Stable Version](https://poser.pugx.org/pm-connect/db-diff/v/stable)](https://packagist.org/packages/pm-connect/db-diff) [![Total Downloads](https://poser.pugx.org/pm-connect/db-diff/downloads.svg)](https://packagist.org/packages/pm-connect/db-diff) [![Latest Unstable Version](https://poser.pugx.org/pm-connect/db-diff/v/unstable.svg)](https://packagist.org/packages/pm-connect/db-diff) [![License](https://poser.pugx.org/pm-connect/db-diff/license.svg)](https://packagist.org/packages/pm-connect/db-diff)
 
-A simple php based database diff tool that you can self host.
+A simple php based database structure diff tool that you can self host.
 
 Looking to build a diff tool your self? Check out [db-diff-utils](https://github.com/PM-Connect/db-diff-utils).
 
