@@ -7,7 +7,7 @@
 <style>
     .alerts {
         width: 300px;
-        position: absolute;
+        position: fixed;
         top: 10px;
         right: 10px;
     }

@@ -14,7 +14,7 @@
         created () {
             this.timeout = setTimeout(() => {
                 this.onClose(this.alert);
-            }, 3000);
+            }, this.alert.timeout || 3000);
         },
 
         data () {

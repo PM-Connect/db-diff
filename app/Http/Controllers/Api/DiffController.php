@@ -2,6 +2,8 @@
 
 namespace PMConnect\DBDiff\Http\Controllers\Api;
 
+use Illuminate\Cache\CacheManager;
+use Illuminate\Contracts\Cache\Repository;
 use PMConnect\DBDiff\Http\Controllers\Controller;
 use PMConnect\DBDiff\Jobs\DiffDatabases;
 use PMConnect\DBDiff\Models\Eloquent\Diff;
@@ -14,20 +16,37 @@ class DiffController extends Controller
      */
     protected $diff;
 
-    public function __construct(Diff $diff)
+    /**
+     * @var Repository
+     */
+    protected $cache;
+
+    public function __construct(Diff $diff, Repository $cache)
     {
         $this->diff = $diff;
+        $this->cache = $cache;
     }
 
     public function index()
     {
-        $diffs = $this->diff->get();
+        $diffs = $this->diff->orderBy('id', 'desc')->get();
 
         foreach ($diffs as $diff) {
-            $diff->successful_logs_count = $diff->successful_logs()->count();
-            $diff->failed_logs_count = $diff->failed_logs()->count();
-            $diff->total_columns = $diff->columns()->get()->count();
-            $diff->total_tables = $diff->tables()->get()->count();
+            $diff->successful_logs_count = $diff->running ? $diff->successful_logs()->count() : $this->cache->remember("$diff->id-successful-logs-count", 1, function () use ($diff) {
+                return $diff->successful_logs()->count();
+            });
+
+            $diff->failed_logs_count = $diff->running ? $diff->failed_logs()->count() : $this->cache->remember("$diff->id-failed-logs-count", 1, function () use ($diff) {
+                return $diff->failed_logs()->count();
+            });
+
+            $diff->total_columns = $diff->running ? $diff->columns()->get()->count() : $this->cache->remember("$diff->id-total-columns", 1, function () use ($diff) {
+                return $diff->columns()->get()->count();
+            });
+
+            $diff->total_tables = $diff->running ? $diff->tables()->get()->count() : $this->cache->remember("$diff->id-total-tables", 1, function () use ($diff) {
+                return $diff->tables()->get()->count();
+            });
         }
 
         return $diffs;

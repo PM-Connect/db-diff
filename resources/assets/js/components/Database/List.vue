@@ -16,8 +16,8 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(database, index) in databases" is="database-row" :database="database" :index="index" @remove="deleteDatabase(database)"></tr>
                 <tr is="database-new" @save="saveDatabase"></tr>
+                <tr v-for="(database, index) in databases" is="database-row" :database="database" :index="index" @remove="deleteDatabase(database)"></tr>
             </tbody>
         </table>
     </div>

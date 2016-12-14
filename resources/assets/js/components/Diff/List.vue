@@ -17,7 +17,6 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="diff in diffs" is="diff-row" :diff="diff"></tr>
                 <tr>
                     <td>&hellip;</td>
                     <td>
@@ -42,6 +41,7 @@
                         <button class="btn btn-sm btn-success" @click="runDiff"><i class="fa fa-fw fa-play"></i></button>
                     </td>
                 </tr>
+                <tr v-for="diff in diffs" is="diff-row" :diff="diff"></tr>
             </tbody>
         </table>
     </div>
@@ -61,8 +61,10 @@
             this.loadDiffs();
 
             setInterval(() => {
-                this.loadDiffs();
-            }, 5000);
+                if (!this.loading) {
+                    this.loadDiffs();
+                }
+            }, 3000);
         },
 
         data () {
@@ -71,16 +73,21 @@
                 databases: DatabaseStore.state,
                 leftDatabase: null,
                 rightDatabase: null,
-                name: null
+                name: null,
+                loading: false,
             };
         },
 
         methods: {
             loadDiffs () {
+                this.loading = true;
+
                 this.$http.get('/api/diff').then((response) => {
                     this.diffs = response.body;
+                    this.loading = false;
                 }, (response) => {
                     alert('Error loading diffs!', 'danger');
+                    this.loading = false;
                 });
             },
             runDiff () {
