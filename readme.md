@@ -55,3 +55,6 @@ php artisan queue:listen --queue=default
 
 For more information on running queue workers, please see [here](https://laravel.com/docs/5.3/queues#running-the-queue-worker).
 
+## Issues
+
+Please submit any issues using GitHubs build in issue management.
