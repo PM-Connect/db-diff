@@ -1,7 +1,7 @@
 {
     "name": "pm-connect/db-diff",
-    "description": "A simple database diff web app.",
-    "keywords": ["app", "database", "tool", "diff"],
+    "description": "A simple php based tool/application for comparing and generating a diff/comparison of any two given databases. Supports multiple database drivers.",
+    "keywords": ["app", "database", "tool", "diff", "comparison", "sysadmin", "mysql", "pgsql", "php7"],
     "license": "MIT",
     "type": "project",
     "require": {

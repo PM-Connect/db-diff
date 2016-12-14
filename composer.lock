@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8264436f4c3b7db56b9b1ca8663ba737",
-    "content-hash": "5a9ac4753577b2caa59b7c99244c872b",
+    "hash": "e622f053a876ae1a032ec23376cd164f",
+    "content-hash": "fa1ad643e87f10c6be1f348520df9c40",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -1419,16 +1419,16 @@
         },
         {
             "name": "pm-connect/db-diff-utils",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PM-Connect/db-diff-utils.git",
-                "reference": "746b78c1d2c266a967db839f99a0cb03e9362e56"
+                "reference": "4710320128f038562dbe5a1b58c37384d2c53372"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PM-Connect/db-diff-utils/zipball/746b78c1d2c266a967db839f99a0cb03e9362e56",
-                "reference": "746b78c1d2c266a967db839f99a0cb03e9362e56",
+                "url": "https://api.github.com/repos/PM-Connect/db-diff-utils/zipball/4710320128f038562dbe5a1b58c37384d2c53372",
+                "reference": "4710320128f038562dbe5a1b58c37384d2c53372",
                 "shasum": ""
             },
             "require": {
@@ -1458,7 +1458,7 @@
                 }
             ],
             "description": "Database Diff Utilities",
-            "time": "2016-12-14 11:45:24"
+            "time": "2016-12-14 13:01:25"
         },
         {
             "name": "psr/log",
