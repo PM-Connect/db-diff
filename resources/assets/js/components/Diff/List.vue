@@ -38,7 +38,8 @@
                         </select>
                     </td>
                     <td class="text-center">
-                        <button class="btn btn-sm btn-success" @click="runDiff"><i class="fa fa-fw fa-play"></i></button>
+                        <button v-if="!running" class="btn btn-sm btn-success" @click="runDiff"><i class="fa fa-fw fa-play"></i></button>
+                        <button v-if="running" class="btn btn-sm btn-success" disabled><i class="fa fa-fw fa-spin fa-spinner"></i></button>
                     </td>
                 </tr>
                 <tr v-for="diff in diffs" is="diff-row" :diff="diff"></tr>
@@ -75,6 +76,7 @@
                 rightDatabase: null,
                 name: null,
                 loading: false,
+                running: false,
             };
         },
 
@@ -91,6 +93,8 @@
                 });
             },
             runDiff () {
+                this.running = true;
+
                 this.$http.post('/api/diff/run', {
                     name: this.name,
                     leftDatabase: this.databases[this.leftDatabase],
@@ -99,6 +103,8 @@
                     if (response.json.running) {
                         this.diffs.push(response.body);
                     }
+
+                    this.running = false;
 
                     alert('Diff is now running!', 'success');
                 }, (response) => {

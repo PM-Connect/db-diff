@@ -8,11 +8,25 @@ Looking to build a diff tool your self? Check out [db-diff-utils](https://github
 
 ## Installation
 
+Installation can be done through either composer, or using docker.
+
+#### Using Composer
+
 You will need to install the project using a web server using php7+.
 
 ```
 composer create-project --prefer-dist pm-connect/db-diff db-diff
 ```
+
+#### Using Docker
+
+There is an available docker image and docker file with this project that will give you a running application within seconds.
+
+Either create a machine from the `jralph/db-diff` docker image, or run the `Dockerfile` and create your own.
+
+__Note:__ When using docker to run the diff application, diffs will be run using the sync queue. This means that you will only be able to run one diff at a time and may be limited to the http request duration.
+
+[Docker Hub](https://hub.docker.com/r/jralph/db-diff/)
 
 ### Config
 
