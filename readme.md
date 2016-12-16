@@ -30,7 +30,7 @@ __Note:__ When using docker to run the diff application, diffs will be run using
 
 ### Config
 
-You will need to set a database configuration to save the diff logs.
+You will need to set a database configuration to save the diff logs, this is done in a `.env` file, which you will need to create. An example is provided below.
 
 Once done, you will also need to run the migrations.
 
