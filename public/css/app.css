@@ -7700,6 +7700,8 @@ button.close {
   color: #d3e0e9;
   font-size: 62px;
   font-weight: 300;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 
 /*# sourceMappingURL=app.css.map */
